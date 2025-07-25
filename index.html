@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Vidros Full-Stack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <table>
+    <caption>Lista de Vidros</caption>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaVidros">
+      <!-- Carregado via JavaScript -->
+    </tbody>
+  </table>
+
+  <div id="formNovoProduto">
+    <h3>➕ Adicionar Novo Produto</h3>
+    <input type="text" id="novoNome" placeholder="Nome do produto">
+    <input type="number" id="novoPreco" placeholder="Preço (R$)" step="0.01" min="0">
+
+    <select id="novaCategoria">
+      <option value="">Selecionar categoria</option>
+      <option value="temperado">Temperado</option>
+      <option value="laminado">Laminado</option>
+      <option value="garrafa">Garrafa</option>
+      <option value="espelhado">Espelhado</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <button onclick="adicionarProduto()">Adicionar</button>
+
+    <h3>🔍 Filtros</h3>
+    <input type="text" id="filtroNome" placeholder="Filtrar por nome">
+    <input type="number" id="precoMin" placeholder="Preço mínimo" min="0">
+    <input type="number" id="precoMax" placeholder="Preço máximo" min="0">
+    <button onclick="filtrarProdutos()">Filtrar</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
